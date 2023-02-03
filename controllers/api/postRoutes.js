@@ -1,17 +1,17 @@
-const express = require('express')
-const app = express()
+const router = require('express').Router()
 
-app.get('/', function(req, res) {
+
+router.post('/', function(req, res) {
     res.send('Hello Sir')
 })
 
 
-app.all('/', function(req, res) {
+router.put('/:id', function(req, res) {
     console.log('Hello Sir')
     next()   // Pass the control to the next handler
 })
 
-app.post('/', function(req, res) {
+app.delete('/:id', function(req, res) {
     res.send('Hello Sir'))
 
     module.exports = router;
