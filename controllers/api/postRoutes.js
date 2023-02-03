@@ -3,7 +3,7 @@ const withAuth =require('../../utils/auth')
 const {Post, User, Comment} = require('../../models')
 
 router.post('/', withAuth, function(req, res) {
-    Post.create()
+    Post.create(req.body, userId: req.session.userId)
 })
 
 
