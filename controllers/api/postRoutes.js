@@ -2,8 +2,8 @@ const router = require('express').Router()
 const withAuth =require('../../utils/auth')
 const {Post, User, Comment} = require('../../models')
 
-router.post('/', function(req, res) {
-    res.send('Hello Sir')
+router.post('/', withAuth, function(req, res) {
+    Post.create()
 })
 
 
