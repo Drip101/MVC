@@ -18,3 +18,5 @@ var app = express()
 
 app.post('/', function(req, res) {
     res.send('Hello Sir'))
+
+    module.exports = router;
