@@ -8,3 +8,5 @@ router.post('/', withAuth, function(req, res) {
     .then(newComment=>{res.json(newComment)})
     .catch(err =>{res.status(500).json(err)})
 })
+
+module.exports = router;

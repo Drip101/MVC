@@ -27,7 +27,7 @@ router.put('/:id', withAuth, function(req, res) {
     
 })
 
-app.delete('/:id', function(req, res) {
+router.delete('/:id', function(req, res) {
     Post.update(req.body, {
         where:{
             id: req.params.id
